@@ -1,5 +1,6 @@
-import { Controller, Post, ValidationPipe } from '@nestjs/common';
+import { Body, Controller, Post, Query, UsePipes, ValidationPipe } from '@nestjs/common';
 import { ApiTags } from '@nestjs/swagger';
+import { PaginationParamDto } from 'src/shared/dto/pagination.dto';
 
 @ApiTags('submission-controller')
 @Controller('configs')
