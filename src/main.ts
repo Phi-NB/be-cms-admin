@@ -32,11 +32,11 @@ async function bootstrap() {
   );
   app.useGlobalInterceptors(new ResponseInterceptor());
   app.useGlobalInterceptors(new ClassSerializerInterceptor(app.get(Reflector)));
-  app.useGlobalFilters(new HttpExceptionFilter());
+  // app.useGlobalFilters(new HttpExceptionFilter());
 
   const document = SwaggerModule.createDocument(app, swaggerConfigs);
   SwaggerModule.setup('swagger.html', app, document);
 
-  await app.listen(process.env.PORT || 3002);
+  await app.listen(process.env.PORT || 3000);
 }
 bootstrap();

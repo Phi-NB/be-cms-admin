@@ -1,5 +1,5 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { DB_COLLECTION } from 'src/constants/database';
+import { DB_COLLECTION } from '../../constants/database';
 import { HydratedDocument } from 'mongoose';
 import * as mongoose from 'mongoose';
 

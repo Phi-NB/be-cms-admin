@@ -1,13 +1,13 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { ThrottlerGuard, ThrottlerModule } from '@nestjs/throttler';
 import { KeycloakConnectModule } from 'nest-keycloak-connect';
-import { KeycloakService } from 'src/modules/keycloak/keycloak.service';
-import { KeycloakModule } from 'src/modules/keycloak/keycloak.module';
-import { databaseConfigs } from 'src/configs/database';
-import { routeConfigs } from 'src/configs/rote';
+import { KeycloakService } from '../modules/keycloak/keycloak.service';
+import { KeycloakModule } from '../modules/keycloak/keycloak.module';
+import { databaseConfigs } from '../configs/database';
+import { routeConfigs } from '../configs/rote';
 import { APP_GUARD } from '@nestjs/core';
+import { AppController } from './app.controller';
+import { AppService } from './app.service';
 
 @Module({
   imports: [
